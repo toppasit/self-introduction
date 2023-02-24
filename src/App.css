@@ -1,5 +1,13 @@
+html, body {
+  background-color: #2C3639;
+}
+
 .App {
   text-align: center;
+  background-color: #2C3639;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .App-logo {
