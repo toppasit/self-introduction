@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   font-family: 'Trebuchet MS';
 `
 
@@ -56,24 +56,9 @@ const Normal = styled.div`
 
 const EndLine = styled.div`
   width: 80%;
-  border-bottom: 1px solid #B6EADA;
-`
-
-const Wave = styled.div`
-  position: relative;
-  background-color: #3bb78f;
-  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
-  &:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 215px;
-    background: url(wave.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  background-color: #B6EADA;
+  height: 4px;
+  border-radius: 8px;
 `
 
 export const ProfileHeader = () => {
