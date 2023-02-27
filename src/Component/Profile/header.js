@@ -35,7 +35,7 @@ const PersonalInfoContainer = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  color: #B6EADA;
+  color: #F4F4F2;
 `
 
 const PersonalInfo = styled.div`
