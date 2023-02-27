@@ -8,6 +8,7 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   font-family: 'Trebuchet MS';
+  padding: 96px;
 `
 
 const Header = styled.div`
@@ -15,9 +16,11 @@ const Header = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 180px;
-  width: 100%;
+  width: 70%;
   padding: 36px 24px 24px 16px;
+  background-color: #001f33;
+  border-radius: 8px;
+  box-shadow: 0 0 16px 4px #869ba9;
 `
 
 const ImgContainer = styled.div`
@@ -34,31 +37,39 @@ const MyImage = styled.img`
 const PersonalInfoContainer = styled.div`
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  word-break: break-word;
+  font-size: 24px;
   width: 100%;
-  color: #F4F4F2;
+  color: #B6EADA;
+`
+
+const NameContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  word-break: break-word;
+  letter-spacing: 8px;
+  width: 100%;
+  font-size: 36px;
+  margin: 36px 0 18px 0;
 `
 
 const PersonalInfo = styled.div`
   display: flex;
-  justift-content: flex-start;
-  align-items: flex-end;
-`
-
-const Bold = styled.div`
-  font-weight: bold;
-  font-size: 16px;
-  margin: 0 8px 0 0;
-`
-
-const Normal = styled.div`
-  font-size: 16px;
+  text-align: start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 18px;
 `
 
 const EndLine = styled.div`
-  width: 80%;
+  width: ${props => props.width};
+  margin: ${props => props.margin};
   background-color: #B6EADA;
-  height: 4px;
+  height: 1px;
   border-radius: 8px;
+  box-shadow: 0 0 12px #869ba9;
 `
 
 export const ProfileHeader = () => {
@@ -69,21 +80,22 @@ export const ProfileHeader = () => {
           <MyImage src={MyPic}/>
         </ImgContainer>
         <PersonalInfoContainer>
+          <NameContainer>
+            PASIT&emsp;TANGKONGCHITR
+          </NameContainer>
+          <EndLine margin={'24px 0'} width={'90%'}/>
           <PersonalInfo>
-            <Bold>Name: </Bold><Normal>Pasit Tangkongchitr</Normal>
+            AGE:&emsp;27
           </PersonalInfo>
           <PersonalInfo>
-            <Bold>Age: </Bold><Normal>27</Normal>
+            EMAIL:&emsp;pasit.tangkongchitr@gmail.com
           </PersonalInfo>
           <PersonalInfo>
-            <Bold>Email: </Bold><Normal>pasit.tangkongchitr@gmail.com</Normal>
-          </PersonalInfo>
-          <PersonalInfo>
-            <Bold>Tel: </Bold><Normal>0625486951</Normal>
+            TEL:&emsp;0625486951
           </PersonalInfo>
         </PersonalInfoContainer>
       </Header>
-      <EndLine></EndLine>
+      <EndLine margin={'48px 0 0 0'} width={'80%'}/>
     </Container>
   )
 }
